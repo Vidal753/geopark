@@ -1,0 +1,28 @@
+.doc__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 50vh;
+  gap:30px;
+  padding: 20px 0;
+}
+
+.doc__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 20px;
+}
+
+.doc__image {
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:  url("https://geoparquecomarcaminera.mx/wp-content/uploads/2020/07/4D9A50611-scaled.jpg");
+}
