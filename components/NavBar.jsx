@@ -1,11 +1,13 @@
 import '../styles/component/navbar.css'
+import DarkModeButton from './DarkModeButton'
 
 export default function NavBar () {
   return (
     <nav className='nav'>
       <section className='nav__container container'>
-        <div>
-          <a href='#' className='nav__logo'>Geoparque</a>
+        <div className='nav__logo'>
+          <a href='#'>Geoparque</a>
+          <DarkModeButton />
         </div>
         <div>
           <ul className='nav__menu'>

@@ -1,0 +1,11 @@
+.theme__button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #000;
+  border: none;
+}
