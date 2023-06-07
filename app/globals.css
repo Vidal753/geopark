@@ -1,9 +1,10 @@
 :root {
-  --primary-color: #76B140;
-  --green: #4C7141;
+  --primary-color: #4C7141;
+  --green: #76B140;
   --text: #000;
   --text-light: #fff;
   --background: #fff;
+  --shadow: rgb(234, 234, 234);
   --hint: #7A7A7A;
 
   --max-width: 1100px;
@@ -91,7 +92,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: all 0.3s ease-in-out;
 }
 
 html,
