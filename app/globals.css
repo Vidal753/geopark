@@ -116,3 +116,7 @@ a {
     color-scheme: dark;
   }
 }
+
+.separator {
+  height: 60px;
+}

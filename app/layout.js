@@ -14,6 +14,7 @@ export default function RootLayout ({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <NavBar />
+        <div className='separator' />
         {children}
       </body>
     </html>
