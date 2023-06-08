@@ -1,28 +1,67 @@
-.doc__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  place-items: center;
+.info {
+  background-color: var(--shadow);
+}
+
+.info__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  min-height: 50vh;
+  min-height: 95vh;
   gap:30px;
-  padding: 20px 0;
+  padding: 40px 20px;
 }
 
-.doc__text {
+.info__text__container {
   flex: 1;
+  min-width: 230px;
   display: flex;
   flex-direction: column;
   text-align: justify;
   gap: 20px;
 }
 
-.doc__image {
-  height: 400px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image:  url("https://geoparquecomarcaminera.mx/wp-content/uploads/2020/07/4D9A50611-scaled.jpg");
+.info__text {
+  position: relative;
+  font-weight: 500;
 }
+
+.info__text::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 100px;
+  height: 3px;
+  background: var(--green);
+}
+
+.info__image {
+  flex: 1;
+  position: relative;
+  height: 400px;
+  min-width: 400px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 0 var(--green);
+}
+
+.info__image__container {
+  border-radius: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+  .info__image {
+    height: 300px;
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info__image {
+    min-width: 250px;
+    height: 250px;
+  }
+}
+  

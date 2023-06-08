@@ -1,5 +1,5 @@
 .banner {
-  height: 50vh;
+  height: 95vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,9 +25,21 @@
 }
 
 .banner__text:first-child {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0 10px
 }
 
 .banner__text:last-child {
-  width: 460px;
+  max-Width: 460px;
+  font-size: 1.5rem;
+  margin:  0 10px
+}
+
+@media screen and (max-width: 500px) {
+  .banner__text:nth-child(1) {
+    font-size: 1.7rem;
+  }
+  .banner__text:nth-child(2) {
+    font-size: 1.2rem;
+  }
 }
