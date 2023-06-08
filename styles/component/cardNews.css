@@ -23,13 +23,38 @@
   border-radius: 10px 10px 0 0;
 }
 
+.news__date {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 5px;
+}
+
 .news__text:nth-child(1) {
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .news__text:nth-child(2) {
   font-size: 0.8rem;
   color: var(--hint);
+}
+
+.news__chevron {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  right: 0;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+.news__chevron__icon {
+  height: 15px;
+  color: var(--background);
 }
 
 .news__text:nth-child(3) {
@@ -40,8 +65,3 @@
   text-overflow: ellipsis;
 }
 
-.news__date {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
