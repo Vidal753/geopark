@@ -7,6 +7,12 @@
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.news__container:hover {
+  transform: scale(1.05);
 }
 
 .news__information {
