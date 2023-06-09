@@ -1,0 +1,36 @@
+.gallery {
+  background-color: var(--shadow);
+}
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.gallery__title {
+  position: relative;
+  font-size: 2rem;
+  color: var(--hint);
+}
+
+.gallery__title::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background: var(--green);
+}
+
+.gallery__grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  width: 100%;
+  margin-top: 40px;
+  gap: 10px;
+}
+

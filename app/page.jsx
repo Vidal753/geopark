@@ -1,6 +1,7 @@
 import '../styles/landingPage.css'
 import DocPage from '../components/InfoPage'
 import NewsPage from '@/components/NewsPage'
+import GalleryPage from '@/components/GalleryPage'
 
 export default function Home () {
   return (
@@ -13,6 +14,7 @@ export default function Home () {
       </section>
       <DocPage />
       <NewsPage />
+      <GalleryPage />
     </main>
   )
 }
