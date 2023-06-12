@@ -4,7 +4,7 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 import '../styles/component/imageModal.css'
 import { useAnimate, motion } from 'framer-motion'
 import Image from 'next/image'
-import { forwardRef, useEffect, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import banner from '../public/img/banner.jpeg'
 
 export const ImageModal = forwardRef(({ picture }, ref) => {
@@ -20,14 +20,6 @@ export const ImageModal = forwardRef(({ picture }, ref) => {
     animateModalContent(modalContent.current, { opacity: 0 }, { duration: 0.2 })
     animateModal(modal.current, { scale: 0 }, { duration: 0, delay: 0.2 })
   }
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => hideImage())
-
-    return () => {
-      window.removeEventListener('scroll', () => hideImage())
-    }
-  })
 
   useImperativeHandle(ref, () => ({
     showImage,

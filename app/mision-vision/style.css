@@ -1,0 +1,142 @@
+.mission-vision {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  z-index: -2;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+}
+
+.mission-vision::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  clip-path: polygon(34% 24%, 39% 45%, 63% 53%, 70% 71%, 88% 74%, 100% 88%, 100% 100%, 0 100%, 0 0, 11% 16%);
+  background-color: var(--green);
+  z-index: -1;
+}
+
+.mission-vision__container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  place-items: center;
+  gap: 5rem;
+}
+
+.mission-vision__description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--background);
+}
+
+.mission-vision__description:first-child {
+  transform: translateX(-30vw);
+  opacity: 0;
+  animation: missionAnimation 1s 1s ease-in-out forwards;
+}
+.mission-vision__description:last-child {
+  transform: translateX(30vw);
+  opacity: 0;
+  animation: visionAnimation 1s 1s ease-in-out forwards;
+}
+
+.mission-vision__title {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 6rem;
+  color: var(--background);
+  animation: titleAnimation 1s ease-in-out forwards;
+}
+
+.mission-vision-text:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.mission-vision-text:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+@media screen and (max-width:800px) {
+  .mission-vision::after {
+    clip-path: polygon(0 100% ,0 0, 30% 33%, 50% 33%, 70% 42%, 90% 42%, 100% 50%, 100% 100%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mission-vision::after {
+    clip-path: polygon(0 100% ,0 0, 30% 33%, 50% 33%, 70% 42%, 90% 42%, 100% 50%, 100% 100%);
+  }
+  .mission-vision__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .mission-vision-text:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+  
+  .mission-vision-text:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color);
+    text-align: justify;
+  }
+
+  .mission-vision__container {
+    gap: 2rem;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes missionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-30vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes visionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(30vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

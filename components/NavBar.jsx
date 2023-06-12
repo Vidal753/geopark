@@ -4,17 +4,16 @@ import Link from 'next/link'
 
 export default function NavBar () {
   const menuItems = [
-    { label: 'Inicio', value: 1 },
-    { label: 'Organización', value: 2 },
-    { label: 'Misión', value: 3 },
-    { label: 'Visión', value: 4 },
-    { label: 'Objetivos', value: 5 }
+    { label: 'Inicio', value: 1, href: '/' },
+    { label: 'Organización', value: 2, href: '/' },
+    { label: 'Misión y visión', value: 3, href: '/mision-vision' },
+    { label: 'Objetivos', value: 4, href: '/' }
   ]
 
   const municipioItems = [
-    { label: 'La libertad', value: 1 },
-    { label: 'Juigalpa', value: 2 },
-    { label: 'San Pedro', value: 3 }
+    { label: 'La libertad', value: 1, href: '/' },
+    { label: 'Juigalpa', value: 2, href: '/' },
+    { label: 'San Pedro', value: 3, href: '/' }
   ]
 
   return (
