@@ -1,13 +1,13 @@
 import '../styles/component/subMenu.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 const Submenu = ({ label, items }) => {
   return (
     <section className='submenu'>
       <p>{label}</p>
-      <FontAwesomeIcon className='submenu__icon' icon={faChevronDown} />
+      <FontAwesomeIcon className='submenu__icon' icon={faCaretDown} />
       <article className='submenu__container'>
         {
           items?.map(item => (

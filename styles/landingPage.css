@@ -26,13 +26,17 @@
 
 .banner__text:first-child {
   font-size: 3rem;
-  margin: 0 10px
+  margin: 0 10px;
+  animation: textAnimation 1s ease-in-out forwards;
 }
 
 .banner__text:last-child {
   max-Width: 460px;
   font-size: 1.5rem;
-  margin:  0 10px
+  margin:  0 10px;
+  opacity: 0;
+  animation: textAnimation 1s 1s ease-in-out forwards;
+
 }
 
 @media screen and (max-width: 500px) {
@@ -41,5 +45,18 @@
   }
   .banner__text:nth-child(2) {
     font-size: 1.2rem;
+  }
+}
+
+
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

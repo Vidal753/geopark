@@ -81,6 +81,9 @@
   .mission-vision::after {
     clip-path: polygon(0 100% ,0 0, 30% 33%, 50% 33%, 70% 42%, 90% 42%, 100% 50%, 100% 100%);
   }
+  .mission-vision__container {
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
