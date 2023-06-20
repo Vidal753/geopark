@@ -1,13 +1,14 @@
+'use client'
 import '../styles/component/cardDocument.css'
-import banner from '../public/img/banner.jpeg'
 import Image from 'next/image'
+import Link from 'next/link'
 
-export const CardDocument = () => {
+export const CardDocument = ({ id, title, description, poster }) => {
   return (
-    <section className='document__card'>
+    <Link className='document__card' href='/[id]/documento' as={`/${id}/documento`}>
       <Image
         className='document__banner'
-        src={banner}
+        src={poster}
         alt='banner'
         width={300}
         height={250}
@@ -16,9 +17,9 @@ export const CardDocument = () => {
         <figure className='document__chevron'>
           <p>Documento</p>
         </figure>
-        <h3 className='document__text'>Historia</h3>
-        <p className='document__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quam quis voluptates, doloribus autem illo debitis praesentium eligendi repellat, molestias qui harum fuga provident voluptatibus sint illum adipisci aut voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <h3 className='document__text'>{title}</h3>
+        <p className='document__text'>{description}</p>
       </article>
-    </section>
+    </Link>
   )
 }

@@ -1,14 +1,20 @@
 import { CardDocument } from './CardDocument'
 import '../styles/documentSection.css'
 
-export default function DocumentSection () {
+const getDocuments = async () => {
+  const res = await fetch('http://localhost:8000/api/documents/')
+  return res.json()
+}
+
+export default async function DocumentSection () {
+  const documents = await getDocuments()
   return (
     <div className='document'>
       <section className='document__container'>
         <h2 className='document__title'>Documentos</h2>
         <article className='document__content'>
-          {[1, 2, 3, 4].map((item, index) => (
-            <CardDocument key={index} />
+          {documents.map((document) => (
+            <CardDocument key={document.id} {...document} />
           ))}
         </article>
       </section>
