@@ -2,6 +2,7 @@ import '../styles/landingSection.css'
 import DocSection from '../components/InfoSection'
 import NewsSection from '@/components/NewsSection'
 import GallerySection from '@/components/GallerySection'
+import DocumentSection from '@/components/DocumentSection'
 
 const getImages = async () => {
   const res = await fetch('http://localhost:8000/api/images/', { cache: 'no-cache' })
@@ -27,6 +28,7 @@ export default async function Home () {
       <DocSection />
       <NewsSection />
       <GallerySection images={images} videos={videos} />
+      <DocumentSection />
     </main>
   )
 }

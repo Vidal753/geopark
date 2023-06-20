@@ -1,0 +1,62 @@
+.document__card{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 450px;
+  background-color: var(--background);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.document__card:hover {
+  transform: scale(1.05);
+}
+
+.document__information {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.document__banner {
+  border-radius: 10px 10px 0 0;
+}
+
+.document__text:nth-child(2) {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.document__chevron {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  top: 0;
+  right: 0;
+  background-color: var(--background);
+  border-radius: 0 5px 0 6px;
+}
+
+.document__chevron__icon {
+  height: 25px;
+  color: var(--background);
+}
+
+.document__text:nth-child(3) {
+  font-size: 0.9rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
