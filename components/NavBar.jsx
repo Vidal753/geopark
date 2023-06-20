@@ -12,7 +12,7 @@ import { DropDownDrawer } from './DropDownDrawer'
 // web options
 const menuItems = [
   { label: 'Inicio', value: 1, href: '/' },
-  { label: 'Organización', value: 2, href: '/' },
+  { label: 'Organización', value: 2, href: '/organizacion' },
   { label: 'Misión y visión', value: 3, href: '/mision-vision' },
   { label: 'Objetivos', value: 4, href: '/' }
 ]

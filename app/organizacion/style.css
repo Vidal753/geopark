@@ -1,0 +1,84 @@
+.organization {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  z-index: -2;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+}
+
+.organization::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  clip-path: polygon(34% 24%, 39% 45%, 63% 53%, 70% 71%, 88% 74%, 100% 88%, 100% 100%, 0 100%, 0 0, 11% 16%);
+  background-color: var(--green);
+  z-index: -1;
+}
+
+.organization__description {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.organization__title {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--background);
+  animation: titleAnimation 1s ease-in-out forwards;
+}
+
+.organization__text {
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--background);
+  text-align: justify;
+  animation: titleAnimation 1s 2s ease-in-out forwards;
+}
+
+@media screen and (max-width:800px) {
+  .mission-vision::after {
+    clip-path: polygon(0 100% ,0 0, 30% 33%, 50% 33%, 70% 42%, 90% 42%, 100% 50%, 100% 100%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .organization::after {
+    clip-path: polygon(0 100% ,0 0, 30% 33%, 50% 33%, 70% 42%, 90% 42%, 100% 50%, 100% 100%);
+  }
+  .organization__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .organization__text {
+    font-size: 1rem;
+    font-weight: 400;
+
+  }
+
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
