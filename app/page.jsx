@@ -3,7 +3,19 @@ import DocPage from '../components/InfoPage'
 import NewsPage from '@/components/NewsPage'
 import GalleryPage from '@/components/GalleryPage'
 
+const getImages = async () => {
+  const res = await fetch('http://localhost:8000/api/images/', { cache: 'no-cache' })
+  return res.json()
+}
+
+const getVideos = async () => {
+  const res = await fetch('http://localhost:8000/api/videos/', { cache: 'no-cache' })
+  return res.json()
+}
+
 export default async function Home () {
+  const images = await getImages()
+  const videos = await getVideos()
   return (
     <main>
       <section className='banner'>
@@ -14,7 +26,7 @@ export default async function Home () {
       </section>
       <DocPage />
       <NewsPage />
-      <GalleryPage />
+      <GalleryPage images={images} videos={videos} />
     </main>
   )
 }

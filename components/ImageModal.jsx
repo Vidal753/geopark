@@ -5,7 +5,6 @@ import '../styles/component/imageModal.css'
 import { useAnimate, motion } from 'framer-motion'
 import Image from 'next/image'
 import { forwardRef, useImperativeHandle } from 'react'
-import banner from '../public/img/banner.jpeg'
 
 export const ImageModal = forwardRef(({ picture }, ref) => {
   const [modalContent, animateModalContent] = useAnimate()
@@ -33,7 +32,9 @@ export const ImageModal = forwardRef(({ picture }, ref) => {
           <FontAwesomeIcon icon={faClose} />
         </article>
         <motion.article className='modal__container'>
-          <Image src={picture ?? banner} alt='banner' fill />
+          {picture && (
+            <Image src={picture} alt='banner' fill />
+          )}
         </motion.article>
       </motion.section>
     </motion.main>
