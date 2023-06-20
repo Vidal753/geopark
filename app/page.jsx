@@ -1,7 +1,7 @@
-import '../styles/landingPage.css'
-import DocPage from '../components/InfoPage'
-import NewsPage from '@/components/NewsPage'
-import GalleryPage from '@/components/GalleryPage'
+import '../styles/landingSection.css'
+import DocSection from '../components/InfoSection'
+import NewsSection from '@/components/NewsSection'
+import GallerySection from '@/components/GallerySection'
 
 const getImages = async () => {
   const res = await fetch('http://localhost:8000/api/images/', { cache: 'no-cache' })
@@ -24,9 +24,9 @@ export default async function Home () {
           <h3 className='banner__text'>Un Geoparque de extraordinariariqueza natural y cultural</h3>
         </div>
       </section>
-      <DocPage />
-      <NewsPage />
-      <GalleryPage images={images} videos={videos} />
+      <DocSection />
+      <NewsSection />
+      <GallerySection images={images} videos={videos} />
     </main>
   )
 }

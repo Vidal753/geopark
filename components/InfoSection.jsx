@@ -1,8 +1,8 @@
-import '../styles/infoPage.css'
+import '../styles/infoSection.css'
 import banner from '../public/img/banner.jpeg'
 import Image from 'next/image'
 
-export default function DocPage () {
+export default function DocSection () {
   return (
     <main className='info'>
       <section className='info__container'>

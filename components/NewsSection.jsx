@@ -1,12 +1,12 @@
 import CardNews from './CardNews'
-import '../styles/newsPage.css'
+import '../styles/newsSection.css'
 
 const getNews = async () => {
   const res = await fetch('http://localhost:8000/api/news/', { cache: 'no-store' })
   return res.json()
 }
 
-export default async function NewsPage () {
+export default async function NewsSection () {
   const news = await getNews()
   return (
     <main className='news'>

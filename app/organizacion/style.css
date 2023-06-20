@@ -47,7 +47,7 @@
   font-weight: 500;
   color: var(--background);
   text-align: justify;
-  animation: titleAnimation 1s 2s ease-in-out forwards;
+  animation: titleAnimation 1s 1s ease-in-out forwards;
 }
 
 @media screen and (max-width:800px) {

@@ -1,10 +1,10 @@
 'use client'
-import '../styles/galleryPage.css'
+import '../styles/gallerySection.css'
 import { CardImage } from './CardImage'
 import { ImageModal } from './ImageModal'
 import { useRef, useState } from 'react'
 
-export default function GalleryPage ({ images, videos }) {
+export default function GallerySection ({ images, videos }) {
   const imageModalRef = useRef(null)
   const [currentImage, setCurrentImage] = useState(null)
 
