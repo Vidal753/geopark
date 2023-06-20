@@ -3,10 +3,11 @@ import calendar from '../public/icons/calendar.png'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
-export default function News ({ title, date, description, banner }) {
+export default function News ({ id, title, date, description, banner }) {
   return (
-    <section className='news__container'>
+    <Link className='news__container' as={`/${id}/noticia`} href='/[id]/noticia'>
       <Image
         className='news__banner'
         src={banner}
@@ -26,6 +27,6 @@ export default function News ({ title, date, description, banner }) {
         <p className='news__text'>{description}
         </p>
       </article>
-    </section>
+    </Link>
   )
 }

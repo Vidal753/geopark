@@ -3,9 +3,9 @@ import '../styles/component/cardDocument.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const CardDocument = ({ id, title, description, poster }) => {
+export const CardDocument = ({ title, description, poster, document }) => {
   return (
-    <Link className='document__card' href='/[id]/documento' as={`/${id}/documento`}>
+    <Link className='document__card' href={document}>
       <Image
         className='document__banner'
         src={poster}
