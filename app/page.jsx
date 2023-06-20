@@ -3,7 +3,7 @@ import DocPage from '../components/InfoPage'
 import NewsPage from '@/components/NewsPage'
 import GalleryPage from '@/components/GalleryPage'
 
-export default function Home () {
+export default async function Home () {
   return (
     <main>
       <section className='banner'>

@@ -9,11 +9,22 @@ export const metadata = {
   description: 'Creado por estudiante de la UNI Keyling Fargas'
 }
 
-export default function RootLayout ({ children }) {
+const getCity = async () => {
+  const res = await fetch('http://localhost:8000/api/city/')
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+export default async function RootLayout ({ children }) {
+  const cities = await getCity()
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <NavBar />
+        <NavBar cities={cities} />
         <div className='separator' />
         {children}
       </body>

@@ -17,38 +17,32 @@ const menuItems = [
   { label: 'Objetivos', value: 4, href: '/' }
 ]
 
-const municipioItems = [
-  { label: 'La libertad', value: 1, href: '/' },
-  { label: 'Juigalpa', value: 2, href: '/' },
-  { label: 'San Pedro', value: 3, href: '/' }
-]
-
-// mobile options
-const drawerItems = [
-  {
-    title: 'GEOPARQUE',
-    description: 'geoparque',
-    options: [
-      { name: 'Inicio', route: '/' },
-      { name: 'Organización', route: '/' },
-      { name: 'Misión y Visión', route: '/mision-vision' },
-      { name: 'Objetivos', route: '/' }
-    ]
-  },
-  {
-    title: 'MINICIPIOS',
-    description: 'municipios',
-    options: [
-      { name: 'La Libertad', route: '/' },
-      { name: 'Juigalpa', route: '/' },
-      { name: 'San Pedro', route: '/' }
-    ]
-  }
-]
-
-export default function NavBar () {
+export default function NavBar ({ cities }) {
   const router = useRouter()
   const [currentOption, setCurrentOption] = useState('')
+  const municipioItems = []
+  const drawerItems = [
+    {
+      title: 'GEOPARQUE',
+      description: 'geoparque',
+      options: [
+        { name: 'Inicio', route: '/' },
+        { name: 'Organización', route: '/' },
+        { name: 'Misión y Visión', route: '/mision-vision' },
+        { name: 'Objetivos', route: '/' }
+      ]
+    },
+    {
+      title: 'MINICIPIOS',
+      description: 'municipios',
+      options: []
+    }
+  ]
+
+  cities.map((city) => {
+    drawerItems[1].options.push({ name: city.name, route: '/' })
+    return municipioItems.push({ label: city.name, value: city.id, href: '/' })
+  })
 
   const openDrawer = () => {
     animate('.drawer', { scale: 1 }, { duration: 0 })
